@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="deleteRow()">Delete Row</button>
+    <button onclick="showPrompt()">Prompt</button>
+    <script>
+        alert("Welecome to page");
+        function showPrompt(){
+            var name = prompt("Enter your name");
+            document.write('WElcome'+name);
+        }
+        function deleteRow(){
+            var result =confirm("Do you want to delete?");
+            if (result==true){
+                document.write("Deleted");
+            }
+        }
+    </script>
+</body>
+</html>

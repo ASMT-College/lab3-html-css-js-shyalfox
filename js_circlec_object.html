@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Circle class
+        function areaCircle(){
+            document.write("Area of Circle: " + Math.PI * (this.radius*this.radius)+" </br>");
+        }
+
+        document.write("Cirlce 1, radius=2</br>");
+        // Using direct instance of object
+        var Circle1 = {radius: 2, area: areaCircle};
+        Circle1.area();
+
+        // Using object constructor
+
+        function Circle(radius){
+            this.radius = radius;
+            this.area = areaCircle;
+        }
+        document.write("Cirlce 2, radius=3</br>");
+        Circle2 = new Circle(3);
+        Circle2.area();
+
+    </script>
+</body>
+</html>
