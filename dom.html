@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="dynamic">
+    
+    </div>
+    <div id="hide"onclick="hidetable()">Hide</div>
+    <div id="hide" onclick="showtable()">Show</div>
+    <div onmouseover="changeTableColor()">ChangeC</div>
+    <div onmouseover="resetTableColor()">ResetC</div>
+
+
+    <script>
+        var myDiv=document.getElementById("dynamic");
+        var myTable=document.createElement('table');
+        var myheadingRow=document.createElement('tr');
+        var myHeadigColoumn1=document.createElement('td');
+        var myHeadigColoumn2=document.createElement('td');
+
+        myHeadigColoumn1.innerHTML='Name'
+        myHeadigColoumn2.innerHTML='Age'
+        myheadingRow.appendChild(myHeadigColoumn1)
+        myheadingRow.appendChild(myHeadigColoumn2)
+     
+        myTable.appendChild(myheadingRow)
+        myDiv.appendChild(myTable)
+        myHeadigColoumn1.addEventListener('click',sayHi)
+        myHeadigColoumn2.setAttribute('ondblclick','sayAge()')
+        function sayHi(){
+            alert('Hi')
+        }
+        function sayAge(){
+            alert('Age')
+        }
+        function hidetable(){
+            var myDiv=document.getElementById("dynamic");
+            myDiv.style.display="none";
+        }
+        function showtable(){
+            var myDiv=document.getElementById("dynamic");
+            myDiv.style.display="block";
+        }
+        function changeTableColor(){
+            var myDiv=document.getElementById("dynamic");
+            myDiv.style.backgroundColor='beige';
+        }
+        function resetTableColor(){
+            var myDiv=document.getElementById("dynamic");
+            myDiv.style.backgroundColor='white';
+        }
+
+
+    </script>
+</body>
+</html>
